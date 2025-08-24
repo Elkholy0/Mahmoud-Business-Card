@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Elkholy - Tamam CEO Digital Business Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#390492',
+                        'primary-dark': '#1D1843',
+                        'primary-light': '#50BEDA',
+                        'accent-yellow': '#E1E552',
+                        'tamam-blue': '#50BEDA',
+                        'tamam-purple': '#390492',
+                        'tamam-dark': '#1D1843'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+
+        
+        .card-shadow {
+            box-shadow: 0 30px 60px -12px rgba(57, 4, 146, 0.4), 0 18px 36px -18px rgba(57, 4, 146, 0.3);
+        }
+        
+        .contact-item {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(57, 4, 146, 0.15);
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #390492, #50BEDA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tech-pattern {
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(225, 229, 82, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(80, 190, 218, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(57, 4, 146, 0.1) 0%, transparent 50%);
+        }
+        
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(225, 229, 82, 0.3);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(225, 229, 82, 0.5);
+                transform: scale(1.02);
+            }
+        }
+        
+        .vcard-button {
+            background: linear-gradient(135deg, #390492, #E1E552);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .vcard-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .vcard-button:hover::before {
+            left: 100%;
+        }
+        
+        .vcard-button:hover {
+            background: linear-gradient(135deg, #1D1843, #d4d930);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(57, 4, 146, 0.3);
+        }
+        
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dark .glass-morphism {
+            background: rgba(24, 24, 24, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .tech-border {
+            border: 2px solid transparent;
+            background: linear-gradient(135deg, rgba(57, 4, 146, 0.1), rgba(80, 190, 218, 0.1)) padding-box,
+                        linear-gradient(135deg, #390492, #50BEDA) border-box;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-900 transition-colors duration-300">
+    <!-- Animated Background -->
+    <div class="fixed inset-0 tech-pattern"></div>
+    
+    <div class="min-h-screen flex items-center justify-center p-4 relative z-10">
+        <div class="w-full max-w-lg">
+            <!-- Main Business Card -->
+            <div class="glass-morphism rounded-3xl card-shadow overflow-hidden fade-in">
+                <!-- Header Section with High-Tech Design -->
+                <div class="relative px-8 py-16 text-center text-white overflow-hidden">
+                    <!-- Tech Background Elements -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-tamam-blue opacity-90"></div>
+                    <div class="absolute top-4 right-4 w-32 h-32 opacity-20">
+                        <img src="https://pfst.cf2.poecdn.net/base/image/8acb92f416e09ec06b658913776a259b963ba36b0b45d91dd84c81cda1a38701?w=1920&h=1080" 
+                             alt="Tech Background" 
+                             class="w-full h-full object-cover rounded-full">
+                    </div>
+                    
+                    <div class="relative z-10">
+                        <!-- Tamam Logo with Glow Effect -->
+                        <div class="w-24 h-24 mx-auto mb-6 pulse-glow rounded-full p-2 bg-white/10 backdrop-blur-sm">
+                            <img src="https://pfst.cf2.poecdn.net/base/image/3d1027fb0ad7b8c569d6e66da5afd0942029cb93f620bb1f4e9cff9ede72d629?w=2345&h=3004" 
+                                 alt="Tamam Logo" 
+                                 class="w-full h-full object-contain filter drop-shadow-xl">
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <h1 class="text-3xl font-black tracking-wide">Mahmoud Elkholy</h1>
+                            <div class="inline-flex items-center bg-accent-yellow/20 backdrop-blur-sm px-6 py-2 rounded-full border border-accent-yellow/30">
+                                <p class="text-accent-yellow font-bold text-lg">CEO</p>
+                            </div>
+                            <p class="text-white/90 font-medium text-lg">Smart Automotive & AI Technology</p>
+                        </div>
+                        
+                        <!-- Tech Elements -->
+                        <div class="mt-6 flex justify-center space-x-6">
+                            <div class="w-8 h-8 rounded-full bg-accent-yellow/20 flex items-center justify-center floating">
+                                <i class="fas fa-microchip text-accent-yellow text-sm"></i>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-tamam-blue/20 flex items-center justify-center floating" style="animation-delay: 0.5s;">
+                                <i class="fas fa-robot text-tamam-blue text-sm"></i>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center floating" style="animation-delay: 1s;">
+                                <i class="fas fa-car text-white text-sm"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 text-2xl font-bold text-accent-yellow" style="font-family: 'Cairo', sans-serif;">!تمــــام</div>
+                        <p class="text-white/70 text-sm mt-2 italic">"Smart Technology Made Simple"</p>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="p-8 space-y-6">
+                    <!-- Phone -->
+                    <div class="contact-item group">
+                        <a href="tel:+966556481314" 
+                           class="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700 hover:bg-primary/5 dark:hover:bg-gray-600 transition-colors">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-phone text-primary"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Phone</p>
+                                <p class="font-semibold text-gray-900 dark:text-white">+966 55 648 1314</p>
+                            </div>
+                            <i class="fas fa-external-link-alt text-gray-400 group-hover:text-primary transition-colors"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="contact-item group">
+                        <a href="mailto:Elkholy@Tamam.com.sa"
+                           class="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700 hover:bg-primary/5 dark:hover:bg-gray-600 transition-colors">
+                            <div class="w-12 h-12 bg-tamam-blue/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-envelope text-tamam-blue"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Email</p>
+                                <p class="font-semibold text-gray-900 dark:text-white">Elkholy@Tamam.com.sa</p>
+                            </div>
+                            <i class="fas fa-external-link-alt text-gray-400 group-hover:text-tamam-blue transition-colors"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Company Website -->
+                    <div class="contact-item group">
+                        <a href="https://tamam-sa.com"
+                           class="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700 hover:bg-primary/5 dark:hover:bg-gray-600 transition-colors">
+                            <div class="w-12 h-12 bg-accent-yellow/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-globe text-accent-yellow"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Company</p>
+                                <p class="font-semibold text-gray-900 dark:text-white">Tamam</p>
+                            </div>
+                            <i class="fas fa-external-link-alt text-gray-400 group-hover:text-accent-yellow transition-colors"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- WhatsApp -->
+                    <div class="contact-item group">
+                        <a href="https://wa.me/966556481314"
+                           class="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700 hover:bg-green-50 dark:hover:bg-gray-600 transition-colors">
+                            <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-green-600 dark:text-green-400"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">WhatsApp</p>
+                                <p class="font-semibold text-gray-900 dark:text-white">+966 55 648 1314</p>
+                            </div>
+                            <i class="fas fa-external-link-alt text-gray-400 group-hover:text-green-500 transition-colors"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Location -->
+                    <div class="contact-item">
+                        <div class="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700">
+                            <div class="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-red-600 dark:text-red-400"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Location</p>
+                                <p class="font-semibold text-gray-900 dark:text-white">Riyadh, Saudi Arabia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="px-8 pb-8 space-y-4">
+                    <!-- Save Contact Button -->
+                    <button onclick="downloadVCard()" 
+                            class="w-full vcard-button text-white py-4 px-6 rounded-xl font-semibold text-base hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-3">
+                        <i class="fas fa-download"></i>
+                        <span>Save Contact</span>
+                    </button>
+                    
+                    <!-- Share Button -->
+                    <button onclick="shareCard()" 
+                            class="w-full border-2 border-primary text-primary py-4 px-6 rounded-xl font-semibold text-base hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center space-x-3">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Share Card</span>
+                    </button>
+                </div>
+                
+                <!-- Company Footer -->
+                <div class="bg-gray-100 dark:bg-gray-700 px-8 py-6 text-center">
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">
+                        Smart Technology Made Simple
+                    </p>
+                    <p class="gradient-text font-bold text-sm">
+                        Vision 2030 Aligned • Built in Saudi Arabia
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // vCard generation function
+        function downloadVCard() {
+            const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Mahmoud Elkholy
+ORG:Tamam
+TITLE:Chief Executive Officer
+TEL;TYPE=CELL:+966556481314
+EMAIL:Elkholy@Tamam.com.sa
+URL:https://tamam-sa.com
+ADR:;;;;Riyadh;Saudi Arabia
+NOTE:Smart Automotive & AI Technology - Chief Executive Officer at Tamam
+END:VCARD`;
+
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Mahmoud_Elkholy_Tamam.vcf';
+            link.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        // Share function
+        function shareCard() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Mahmoud Elkholy - Tamam CEO',
+                    text: 'Chief Executive Officer at Tamam - Smart Automotive & AI Technology',
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                // Fallback to copying link to clipboard
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    // Create a temporary notification
+                    const notification = document.createElement('div');
+                    notification.className = 'fixed top-4 right-4 bg-primary text-white px-6 py-3 rounded-lg shadow-lg z-50';
+                    notification.textContent = 'Link copied to clipboard!';
+                    document.body.appendChild(notification);
+                    
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 3000);
+                }).catch(console.error);
+            }
+        }
+
+        // Add click animations to contact items
+        document.querySelectorAll('.contact-item a').forEach(item => {
+            item.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
